@@ -21,7 +21,7 @@ class BlogController extends Controller
      * show a form for creating new blog
      */
     public function create(){
-        return view('blog.create');
+        return view('blogs.create');
     }
     /**
      * store a blog into database

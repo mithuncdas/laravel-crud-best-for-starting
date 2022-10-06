@@ -17,12 +17,13 @@ use Illuminate\Support\Facades\Route;
 /**
  * blog route start
  */
-Route::get('/',[BlogController::class,'index'])->name('blog.all');
+Route::get('/',[BlogController::class,'index'])->name('blog.index');
 Route::get('/blog/create',[BlogController::class,'create'])->name('blog.create');
-Route::get('/blog/store',[BlogController::class,'store'])->name('blog.store');
-Route::get('/blog/edit',[BlogController::class,'edit'])->name('blog.edit');
-Route::get('/blog/update',[BlogController::class,'update'])->name('blog.update');
-Route::get('/blog/delete',[BlogController::class,'delete'])->name('blog.delete');
+Route::post('/blog/store',[BlogController::class,'store'])->name('blog.store');
+Route::get('/blog/edit/{id}',[BlogController::class,'edit'])->name('blog.edit');
+Route::post('/blog/update/{id}',[BlogController::class,'update'])->name('blog.update');
+Route::get('/blog/show/{id}',[BlogController::class,'show'])->name('blog.show');
+Route::get('/blog/delete/{id}',[BlogController::class,'destroy'])->name('blog.delete');
 /**
  * blog route end
  */
