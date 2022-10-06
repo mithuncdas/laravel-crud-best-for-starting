@@ -21,7 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-        <div class="container">
+        <div class="container mt-4">
             <div class="row">
                 <div class="col-12">
                     <div class="card">
